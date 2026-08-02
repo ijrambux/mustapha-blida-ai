@@ -1,0 +1,95 @@
+# Mustapha Blida AI - Configuration
+# =================================
+# Edit this file with your API keys before running the app.
+
+[app]
+# App settings
+app_name = "Mustapha Blida AI"
+app_version = "1.0.0"
+app_author = "https://x.com/mouse0000000"
+
+# LLM Provider: openai, gemini, deepseek, openrouter, ollama, moonshot, oneapi
+llm_provider = "openai"
+
+# Video source: pexels, pixabay
+video_source = "pexels"
+
+# TTS Provider: edge, elevenlabs, siliconflow
+tts_provider = "edge"
+
+# Output directory
+output_dir = "./storage/output"
+
+[llm]
+# OpenAI Settings
+openai_api_key = "sk-your-openai-key-here"
+openai_base_url = "https://api.openai.com/v1"
+openai_model_name = "gpt-4o-mini"
+
+# Google Gemini (FREE tier available)
+gemini_api_key = "your-gemini-key-here"
+gemini_model_name = "gemini-1.5-flash"
+
+# DeepSeek
+deepseek_api_key = "your-deepseek-key-here"
+deepseek_model_name = "deepseek-chat"
+deepseek_base_url = "https://api.deepseek.com/v1"
+
+# Ollama (local, FREE)
+ollama_base_url = "http://localhost:11434"
+ollama_model_name = "llama3"
+
+# Moonshot (Kimi)
+moonshot_api_key = "your-moonshot-key-here"
+moonshot_model_name = "moonshot-v1-8k"
+moonshot_base_url = "https://api.moonshot.cn/v1"
+
+[pexels]
+# Get FREE key from: https://www.pexels.com/api/
+pexels_api_keys = ["your-pexels-api-key-here"]
+
+[pixabay]
+# Get FREE key from: https://pixabay.com/api/docs/
+pixabay_api_keys = ["your-pixabay-api-key-here"]
+
+[tts]
+# Edge TTS (FREE, default)
+edge_tts_voice = "auto"  # auto-detects based on language
+
+# ElevenLabs (paid, higher quality)
+elevenlabs_api_key = "your-elevenlabs-key"
+elevenlabs_voice_id = "your-voice-id"
+
+# SiliconFlow (Chinese TTS)
+siliconflow_api_key = "your-siliconflow-key"
+siliconflow_model = "FunAudioLLM/CosyVoice2-0.5B"
+
+[subtitle]
+# Subtitle settings
+font_name = "default"
+font_size = 60
+text_fore_color = "#FFFFFF"
+text_background_color = "transparent"
+stroke_color = "#000000"
+stroke_width = 1.5
+subtitle_position = "bottom"  # bottom, top, center, custom
+custom_position = 0.5
+
+[video]
+# Default video settings
+video_aspect = "9:16"
+video_concat_mode = "random"
+video_transition_mode = "no"
+video_clip_duration = 3
+video_count = 1
+n_threads = 2
+
+[bgm]
+# Background music
+bgm_type = "random"
+bgm_volume = 0.2
+
+[proxy]
+# HTTP proxy (if needed)
+http_proxy = ""
+https_proxy = ""

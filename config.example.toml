@@ -1,0 +1,71 @@
+# Mustapha Blida AI - Example Configuration
+# ==========================================
+# 1. انسخ هذا الملف: cp config.example.toml config.toml
+# 2. عدّل المفاتيح أدناه بمفاتيحك الخاصة
+# 3. احفظ الملف
+
+[app]
+app_name = "Mustapha Blida AI"
+app_version = "1.0.0"
+app_author = "https://x.com/mouse0000000"
+
+llm_provider = "gemini"      # openai, gemini, deepseek, ollama
+video_source = "pexels"      # pexels, pixabay
+tts_provider = "edge"        # edge (مجاني), elevenlabs
+output_dir = "./storage/output"
+
+[llm]
+# OpenAI (https://platform.openai.com/api-keys)
+openai_api_key = ""
+openai_base_url = "https://api.openai.com/v1"
+openai_model_name = "gpt-4o-mini"
+
+# Google Gemini (مجاني! https://aistudio.google.com/)
+gemini_api_key = "YOUR_GEMINI_API_KEY_HERE"
+gemini_model_name = "gemini-1.5-flash"
+
+# DeepSeek
+deepseek_api_key = ""
+deepseek_model_name = "deepseek-chat"
+deepseek_base_url = "https://api.deepseek.com/v1"
+
+# Ollama (محلي ومجاني - http://localhost:11434)
+ollama_base_url = "http://localhost:11434"
+ollama_model_name = "llama3"
+
+[pexels]
+# احصل على مفتاح مجاني من: https://www.pexels.com/api/
+pexels_api_keys = ["YOUR_PEXELS_API_KEY_HERE"]
+
+[pixabay]
+# احصل على مفتاح مجاني من: https://pixabay.com/api/docs/
+pixabay_api_keys = ["YOUR_PIXABAY_API_KEY_HERE"]
+
+[tts]
+edge_tts_voice = "auto"
+
+[subtitle]
+font_name = "default"
+font_size = 60
+text_fore_color = "#FFFFFF"
+text_background_color = "transparent"
+stroke_color = "#000000"
+stroke_width = 1.5
+subtitle_position = "bottom"
+custom_position = 0.5
+
+[video]
+video_aspect = "9:16"
+video_concat_mode = "random"
+video_transition_mode = "no"
+video_clip_duration = 3
+video_count = 1
+n_threads = 2
+
+[bgm]
+bgm_type = "random"
+bgm_volume = 0.2
+
+[proxy]
+http_proxy = ""
+https_proxy = ""
